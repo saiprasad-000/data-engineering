@@ -1,6 +1,7 @@
 Create or replace view dev.silver.dim_date as
 select
   date_sk,
+  date,
   day,
   week,
   month,
@@ -11,3 +12,5 @@ from
   dev.bronze.dim_date
 where
   date >= '2026-01-01'
+
+  select * from dev.silver.dim_date
